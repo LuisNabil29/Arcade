@@ -1,7 +1,7 @@
-import React from 'react';
+import type { FC } from 'react';
 import GamePlaceholder from '../../components/GamePlaceholder';
 
-const PinballPage: React.FC = () => {
+const PinballPage: FC = () => {
   return (
     <GamePlaceholder
       gameName="Pinball"
@@ -12,4 +12,4 @@ const PinballPage: React.FC = () => {
   );
 };
 
-export default PinballPage; 
+export default PinballPage;

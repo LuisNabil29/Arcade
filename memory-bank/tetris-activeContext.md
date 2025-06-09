@@ -104,7 +104,8 @@ const gameLoop = () => {
 ### Prioridades de Desarrollo
 1. **Setup básico**: Canvas, game loop, input handling
 2. **Tetrominós**: Creación, rotación, movimiento
-3. **Tablero**: Detección de colisiones, placement
+3. **Tablero**: Detección de colisiones
+
 4. **Líneas**: Detección y eliminación
 5. **Puntuación**: Sistema de puntos y niveles
 6. **UI**: HUD completo con información
@@ -135,10 +136,10 @@ const gameLoop = () => {
 ## 🚀 Milestones
 
 ### Milestone 1: Core Mechanics (Semana 1)
-- [ ] Canvas setup y game loop
-- [ ] Tetrominós básicos funcionando
-- [ ] Movimiento y rotación
-- [ ] Detección de colisiones
+- [x] Canvas setup y game loop
+- [x] Tetrominós básicos funcionando
+- [x] Movimiento y rotación
+- [x] Detección de colisiones
 
 ### Milestone 2: Game Logic (Semana 2)  
 - [ ] Eliminación de líneas
@@ -187,4 +188,4 @@ const gameLoop = () => {
 
 ---
 
-**Próximo paso**: Implementar canvas básico y game loop inicial 
+**Próximo paso**: Implementar line clearing y sistema de puntuación

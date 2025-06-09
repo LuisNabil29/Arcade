@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import type { FC, CSSProperties } from 'react';
 import './GameCard.css';
 
 interface GameCardProps {
@@ -11,7 +11,7 @@ interface GameCardProps {
   icon: string; // Emoji o símbolo para representar el juego
 }
 
-const GameCard: React.FC<GameCardProps> = ({
+const GameCard: FC<GameCardProps> = ({
   title,
   description,
   route,
@@ -20,7 +20,7 @@ const GameCard: React.FC<GameCardProps> = ({
   icon
 }) => {
   return (
-    <div className={`game-card ${!isAvailable ? 'disabled' : ''}`} style={{ '--game-color': color } as React.CSSProperties}>
+    <div className={`game-card ${!isAvailable ? 'disabled' : ''}`} style={{ '--game-color': color } as CSSProperties}>
       <div className="game-card-inner">
         {/* Icono del juego */}
         <div className="game-icon">

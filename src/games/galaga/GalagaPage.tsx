@@ -1,7 +1,7 @@
-import React from 'react';
+import type { FC } from 'react';
 import GamePlaceholder from '../../components/GamePlaceholder';
 
-const GalagaPage: React.FC = () => {
+const GalagaPage: FC = () => {
   return (
     <GamePlaceholder
       gameName="Galaga"
@@ -12,4 +12,4 @@ const GalagaPage: React.FC = () => {
   );
 };
 
-export default GalagaPage; 
+export default GalagaPage;

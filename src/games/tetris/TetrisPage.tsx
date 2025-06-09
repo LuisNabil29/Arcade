@@ -1,15 +1,8 @@
-import React from 'react';
-import GamePlaceholder from '../../components/GamePlaceholder';
+import type { FC } from 'react';
+import TetrisGame from './TetrisGame';
 
-const TetrisPage: React.FC = () => {
-  return (
-    <GamePlaceholder
-      gameName="Tetris"
-      gameIcon="🧩"
-      gameColor="#00ffff"
-      description="El clásico juego de bloques que caen. Organiza las piezas tetromino para completar líneas horizontales y conseguir la puntuación más alta. Un juego que nunca pasa de moda."
-    />
-  );
+const TetrisPage: FC = () => {
+  return <TetrisGame />;
 };
 
-export default TetrisPage; 
+export default TetrisPage;

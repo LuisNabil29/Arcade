@@ -1,7 +1,7 @@
-import React from 'react';
+import type { FC } from 'react';
 import GamePlaceholder from '../../components/GamePlaceholder';
 
-const SnakePage: React.FC = () => {
+const SnakePage: FC = () => {
   return (
     <GamePlaceholder
       gameName="Viborita"
@@ -12,4 +12,4 @@ const SnakePage: React.FC = () => {
   );
 };
 
-export default SnakePage; 
+export default SnakePage;

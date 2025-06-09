@@ -1,4 +1,4 @@
-import React from 'react';
+import type { FC } from 'react';
 import GameCard from './GameCard';
 import './GameGrid.css';
 
@@ -51,7 +51,7 @@ const gamesData = [
   }
 ];
 
-const GameGrid: React.FC = () => {
+const GameGrid: FC = () => {
   return (
     <section className="game-grid-section">
       <div className="container">

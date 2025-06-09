@@ -1,5 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import type { FC, CSSProperties } from 'react';
 import './GamePlaceholder.css';
 
 interface GamePlaceholderProps {
@@ -9,14 +9,14 @@ interface GamePlaceholderProps {
   description: string;
 }
 
-const GamePlaceholder: React.FC<GamePlaceholderProps> = ({
+const GamePlaceholder: FC<GamePlaceholderProps> = ({
   gameName,
   gameIcon,
   gameColor,
   description
 }) => {
   return (
-    <div className="game-placeholder" style={{ '--game-color': gameColor } as React.CSSProperties}>
+    <div className="game-placeholder" style={{ '--game-color': gameColor } as CSSProperties}>
       <div className="placeholder-container">
         <div className="container">
           {/* Botón de regreso */}

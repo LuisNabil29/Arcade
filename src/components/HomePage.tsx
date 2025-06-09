@@ -1,8 +1,8 @@
-import React from 'react';
+import type { FC } from 'react';
 import GameGrid from './GameGrid';
 import './HomePage.css';
 
-const HomePage: React.FC = () => {
+const HomePage: FC = () => {
   return (
     <div className="home-page">
       {/* Hero Section */}
