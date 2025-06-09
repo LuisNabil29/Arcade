@@ -195,5 +195,6 @@ src/games/tetris/
 ---
 
 Se habilitó el acceso a Tetris desde la página principal para iniciar las pruebas de juego.
+Se instalaron las dependencias necesarias para poder compilar y ejecutar la aplicación sin errores.
 
 **Próximo paso**: Implementar eliminación de líneas y sistema de puntuación

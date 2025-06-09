@@ -189,5 +189,6 @@ const gameLoop = () => {
 ---
 
 Se habilitó el acceso al juego desde la página principal.
+Se instalaron las dependencias faltantes para que el proyecto compile correctamente.
 
 **Próximo paso**: Implementar line clearing y sistema de puntuación
