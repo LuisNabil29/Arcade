@@ -12,4 +12,4 @@ const GalagaPage: React.FC = () => {
   );
 };
 
-export default GalagaPage; 
+export default GalagaPage;

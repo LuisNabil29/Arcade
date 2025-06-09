@@ -12,4 +12,4 @@ const SnakePage: React.FC = () => {
   );
 };
 
-export default SnakePage; 
+export default SnakePage;
