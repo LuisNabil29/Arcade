@@ -212,4 +212,4 @@ const snakeGameLoop = () => {
 
 ---
 
-**Próximo paso**: Adaptar game engine de Tetris para Snake y implementar movimiento básico 
+**Próximo paso**: Desarrollar mecánicas avanzadas como colisiones y puntuación

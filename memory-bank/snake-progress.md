@@ -2,7 +2,7 @@
 
 ## 🎯 Estado General del Proyecto Snake
 
-### Fase Actual: **Preparación** 
+### Fase Actual: **Implementación Inicial**
 - **Rama**: `feature/snake`
 - **Prioridad**: Segundo juego (después de Tetris)
 - **Objetivo**: Implementar Snake completo reutilizando patrones de Tetris
@@ -24,12 +24,12 @@
 ## 🔄 En Progreso
 
 ### Milestone 1: Core Setup (Pendiente)
-- [ ] **Canvas setup** - Grid cuadrado 30x30
-- [ ] **Game loop** - Adaptado de Tetris para movimiento continuo
-- [ ] **Input handling** - Sistema direccional
-- [ ] **Estructura de componentes** - SnakeGame, SnakeCanvas, SnakeUI
+- [x] **Canvas setup** - Grid cuadrado 30x30
+- [x] **Game loop** - Adaptado de Tetris para movimiento continuo
+- [x] **Input handling** - Sistema direccional
+- [x] **Estructura de componentes** - SnakeGame, SnakeCanvas, SnakeUI
 
-**Progreso**: 0% - Esperando finalización de Tetris
+**Progreso**: 100% - Core implementado
 
 ## 📋 Pendiente
 
@@ -103,10 +103,10 @@ src/games/snake/
 ## 📊 Métricas de Progreso
 
 ### Desarrollo
-- **Commits realizados**: 0
-- **Archivos creados**: 0/12
+- **Commits realizados**: 1
+- **Archivos creados**: 5/12
 - **Tests escritos**: 0/15
-- **Features completadas**: 0/12
+- **Features completadas**: 4/12
 
 ### Performance Targets
 - **FPS objetivo**: 60 FPS constantes
@@ -229,4 +229,4 @@ src/games/snake/
 
 ---
 
-**Próximo paso**: Esperar finalización de Tetris para iniciar adaptación del game engine 
+**Próximo paso**: Continuar con las mecánicas de la serpiente y sistema de comida
