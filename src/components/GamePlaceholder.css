@@ -1,0 +1,335 @@
+/* Estilos para GamePlaceholder */
+.game-placeholder {
+  min-height: 100vh;
+  background: var(--bg-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Botón de regreso */
+.back-button-container {
+  position: absolute;
+  top: var(--spacing-md);
+  left: var(--spacing-md);
+  z-index: 10;
+}
+
+.btn-back {
+  color: var(--text-secondary);
+  border-color: var(--text-secondary);
+  font-size: 0.9rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  color: var(--game-color, var(--neon-cyan));
+  border-color: var(--game-color, var(--neon-cyan));
+  background: var(--game-color, var(--neon-cyan));
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--game-color, var(--neon-cyan));
+}
+
+/* Contenido principal */
+.placeholder-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Icono grande del juego */
+.game-icon-large {
+  font-size: 8rem;
+  margin-bottom: var(--spacing-lg);
+  filter: drop-shadow(0 0 30px var(--game-color, var(--neon-cyan)));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 30px var(--game-color, var(--neon-cyan)));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 50px var(--game-color, var(--neon-cyan)));
+  }
+}
+
+/* Título del juego */
+.game-title-large {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--game-color, var(--neon-cyan));
+  text-shadow: 
+    0 0 10px var(--game-color, var(--neon-cyan)),
+    0 0 20px var(--game-color, var(--neon-cyan)),
+    0 0 30px var(--game-color, var(--neon-cyan));
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+/* Badge de "Próximamente" */
+.coming-soon-badge {
+  display: inline-block;
+  margin-bottom: var(--spacing-lg);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.badge-text {
+  background: linear-gradient(
+    45deg,
+    var(--game-color, var(--neon-cyan)),
+    var(--neon-pink)
+  );
+  color: var(--bg-dark);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  box-shadow: 0 0 20px var(--game-color, var(--neon-cyan));
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px var(--game-color, var(--neon-cyan));
+  }
+  to {
+    box-shadow: 0 0 30px var(--game-color, var(--neon-cyan));
+  }
+}
+
+/* Descripción del juego */
+.game-description-large {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Información de desarrollo */
+.development-info {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--game-color, var(--neon-cyan));
+  border-radius: var(--border-radius);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  backdrop-filter: blur(10px);
+}
+
+.development-info h3 {
+  color: var(--game-color, var(--neon-cyan));
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.5rem;
+}
+
+.development-info p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.6;
+}
+
+/* Preview de características */
+.features-preview {
+  text-align: left;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.features-preview h4 {
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+.features-preview ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features-preview li {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-sm);
+  position: relative;
+}
+
+.features-preview li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--game-color, var(--neon-cyan));
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--game-color, var(--neon-cyan));
+}
+
+/* Botones de acción */
+.action-buttons {
+  margin-top: var(--spacing-xl);
+}
+
+.action-buttons .btn {
+  margin: 0 var(--spacing-sm);
+}
+
+/* Efectos visuales de fondo */
+.placeholder-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Iconos flotantes */
+.floating-icons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.1;
+  color: var(--game-color, var(--neon-cyan));
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.icon-1 {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.icon-2 {
+  top: 70%;
+  right: 20%;
+  animation-delay: 2s;
+}
+
+.icon-3 {
+  bottom: 30%;
+  left: 10%;
+  animation-delay: 4s;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg);
+  }
+}
+
+/* Patrón de grid de fondo */
+.grid-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .back-button-container {
+    top: var(--spacing-sm);
+    left: var(--spacing-sm);
+  }
+  
+  .placeholder-content {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+  
+  .game-icon-large {
+    font-size: 5rem;
+  }
+  
+  .development-info {
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .features-preview {
+    text-align: center;
+  }
+  
+  .features-preview ul {
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .floating-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-icon-large {
+    font-size: 4rem;
+  }
+  
+  .game-description-large {
+    font-size: 1rem;
+  }
+  
+  .development-info {
+    padding: var(--spacing-sm);
+  }
+  
+  .action-buttons .btn {
+    display: block;
+    margin: var(--spacing-sm) auto;
+    width: 200px;
+  }
+}

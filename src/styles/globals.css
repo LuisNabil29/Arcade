@@ -1,0 +1,253 @@
+/* Importar fuente pixelada de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/* Reset y configuración base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables CSS para tema arcade */
+:root {
+  /* Colores neón */
+  --neon-cyan: #00ffff;
+  --neon-pink: #ff00ff;
+  --neon-green: #00ff00;
+  --neon-yellow: #ffff00;
+  --neon-orange: #ff8000;
+  --neon-purple: #8000ff;
+  
+  /* Colores de fondo */
+  --bg-dark: #0a0a0a;
+  --bg-darker: #050505;
+  --bg-card: #1a1a1a;
+  --bg-card-hover: #2a2a2a;
+  
+  /* Colores de texto */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #888888;
+  
+  /* Sombras neón */
+  --shadow-cyan: 0 0 20px var(--neon-cyan);
+  --shadow-pink: 0 0 20px var(--neon-pink);
+  --shadow-green: 0 0 20px var(--neon-green);
+  --shadow-yellow: 0 0 20px var(--neon-yellow);
+  --shadow-orange: 0 0 20px var(--neon-orange);
+  
+  /* Fuentes */
+  --font-primary: 'Orbitron', monospace;
+  --font-size-xl: 3rem;
+  --font-size-lg: 2rem;
+  --font-size-md: 1.5rem;
+  --font-size-sm: 1rem;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
+  
+  /* Bordes */
+  --border-radius: 8px;
+  --border-width: 2px;
+}
+
+/* Configuración del body */
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  
+  /* Fondo con patrón de puntos para efecto retro */
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+}
+
+/* Configuración del contenedor principal */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para títulos */
+h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  /* Efecto de texto neón */
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  
+  /* Animación de parpadeo sutil */
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+h2 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+  margin-bottom: var(--spacing-md);
+}
+
+h3 {
+  font-size: var(--font-size-md);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Animación de brillo para títulos */
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      0 0 20px var(--neon-cyan);
+  }
+  to {
+    text-shadow: 
+      0 0 10px var(--neon-cyan),
+      0 0 20px var(--neon-cyan),
+      0 0 30px var(--neon-cyan),
+      0 0 40px var(--neon-cyan);
+  }
+}
+
+/* Estilos para botones */
+.btn {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: var(--border-width) solid;
+  border-radius: var(--border-radius);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  
+  /* Efecto de escaneo */
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+/* Variantes de botones */
+.btn-primary {
+  color: var(--neon-cyan);
+  border-color: var(--neon-cyan);
+}
+
+.btn-primary:hover {
+  background: var(--neon-cyan);
+  color: var(--bg-dark);
+  box-shadow: var(--shadow-cyan);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--neon-pink);
+  border-color: var(--neon-pink);
+}
+
+.btn-secondary:hover {
+  background: var(--neon-pink);
+  color: var(--bg-dark);
+  box-shadow: var(--shadow-pink);
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  color: var(--neon-green);
+  border-color: var(--neon-green);
+}
+
+.btn-success:hover {
+  background: var(--neon-green);
+  color: var(--bg-dark);
+  box-shadow: var(--shadow-green);
+  transform: translateY(-2px);
+}
+
+/* Estilos para contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* Utilidades de espaciado */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.p-sm { padding: var(--spacing-sm); }
+.p-md { padding: var(--spacing-md); }
+.p-lg { padding: var(--spacing-lg); }
+
+/* Utilidades de texto */
+.text-center { text-align: center; }
+.text-uppercase { text-transform: uppercase; }
+.text-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  :root {
+    --font-size-xl: 2rem;
+    --font-size-lg: 1.5rem;
+    --font-size-md: 1.25rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  h1 {
+    letter-spacing: 2px;
+  }
+} 

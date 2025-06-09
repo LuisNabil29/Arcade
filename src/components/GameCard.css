@@ -1,0 +1,217 @@
+/* Estilos para GameCard */
+.game-card {
+  position: relative;
+  background: var(--bg-card);
+  border: var(--border-width) solid var(--game-color, var(--neon-cyan));
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 300px;
+  
+  /* Efecto de escaneo de fondo */
+  background-image: 
+    linear-gradient(
+      45deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.02) 25%,
+      rgba(255, 255, 255, 0.02) 50%,
+      transparent 50%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.02) 75%
+    );
+  background-size: 20px 20px;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  background: var(--bg-card-hover);
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px var(--game-color, var(--neon-cyan));
+  border-color: var(--game-color, var(--neon-cyan));
+}
+
+.game-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.game-card.disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Contenedor interno de la tarjeta */
+.game-card-inner {
+  padding: var(--spacing-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+/* Icono del juego */
+.game-icon {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+  filter: drop-shadow(0 0 10px var(--game-color, var(--neon-cyan)));
+  transition: all 0.3s ease;
+}
+
+.game-card:hover .game-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 20px var(--game-color, var(--neon-cyan)));
+}
+
+/* Contenido de la tarjeta */
+.game-content {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.game-title {
+  color: var(--game-color, var(--neon-cyan));
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 0 0 10px var(--game-color, var(--neon-cyan));
+  transition: all 0.3s ease;
+}
+
+.game-card:hover .game-title {
+  text-shadow: 
+    0 0 5px var(--game-color, var(--neon-cyan)),
+    0 0 10px var(--game-color, var(--neon-cyan)),
+    0 0 15px var(--game-color, var(--neon-cyan));
+}
+
+.game-description {
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Botón de acción */
+.game-action {
+  text-align: center;
+}
+
+.btn-game {
+  color: var(--game-color, var(--neon-cyan));
+  border-color: var(--game-color, var(--neon-cyan));
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  min-width: 120px;
+  transition: all 0.3s ease;
+}
+
+.btn-game:hover {
+  background: var(--game-color, var(--neon-cyan));
+  color: var(--bg-dark);
+  box-shadow: 0 0 20px var(--game-color, var(--neon-cyan));
+  transform: translateY(-2px);
+}
+
+.btn-game.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Efecto de brillo en hover */
+.game-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at center,
+    var(--game-color, var(--neon-cyan)) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.game-card:hover .game-glow {
+  opacity: 0.1;
+}
+
+/* Efecto de líneas de escaneo animadas */
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--game-color, var(--neon-cyan)),
+    transparent
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+
+.game-card:hover::before {
+  opacity: 0.1;
+  transform: translateX(100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .game-card {
+    min-height: 250px;
+  }
+  
+  .game-card-inner {
+    padding: var(--spacing-sm);
+  }
+  
+  .game-icon {
+    font-size: 3rem;
+  }
+  
+  .game-title {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+  
+  .game-description {
+    font-size: 0.9rem;
+  }
+  
+  .btn-game {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-card {
+    min-height: 200px;
+  }
+  
+  .game-icon {
+    font-size: 2.5rem;
+  }
+  
+  .game-title {
+    font-size: 1.1rem;
+  }
+} 
