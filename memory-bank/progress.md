@@ -29,9 +29,9 @@
   - [ ] Score system (lines cleared, levels)
   
 - [ ] **Snake Game**
-  - [ ] Game logic (snake movement, food generation, collision)
-  - [ ] Canvas rendering (snake, food, grid)
-  - [ ] Input handling (arrow keys, touch)
+  - [x] Game logic (snake movement, food generation, collision)
+  - [x] Canvas rendering (snake, food, grid)
+  - [x] Input handling (arrow keys, touch)
   - [ ] Score system (food eaten, high score)
   
 - [ ] **Pac-Man Game**
