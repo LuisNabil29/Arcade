@@ -12,4 +12,4 @@ const PinballPage: React.FC = () => {
   );
 };
 
-export default PinballPage; 
+export default PinballPage;

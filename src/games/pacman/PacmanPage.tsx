@@ -12,4 +12,4 @@ const PacmanPage: React.FC = () => {
   );
 };
 
-export default PacmanPage; 
+export default PacmanPage;
