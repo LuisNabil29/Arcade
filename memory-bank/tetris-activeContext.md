@@ -188,4 +188,6 @@ const gameLoop = () => {
 
 ---
 
+Se habilitó el acceso al juego desde la página principal.
+
 **Próximo paso**: Implementar line clearing y sistema de puntuación

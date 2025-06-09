@@ -194,4 +194,6 @@ src/games/tetris/
 
 ---
 
+Se habilitó el acceso a Tetris desde la página principal para iniciar las pruebas de juego.
+
 **Próximo paso**: Implementar eliminación de líneas y sistema de puntuación

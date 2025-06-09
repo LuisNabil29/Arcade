@@ -9,7 +9,7 @@ const gamesData = [
     title: 'Tetris',
     description: 'El clásico juego de bloques que caen. Organiza las piezas para completar líneas.',
     route: '/tetris',
-    isAvailable: false, // Por ahora todos son placeholders
+    isAvailable: true,
     color: '#00ffff', // Cyan neón
     icon: '🧩'
   },
