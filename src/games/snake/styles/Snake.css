@@ -1,0 +1,16 @@
+.snake-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.snake-ui {
+  margin-top: 1rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.snake-ui button {
+  margin-top: 0.5rem;
+}
